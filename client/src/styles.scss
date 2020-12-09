@@ -1,0 +1,38 @@
+/* You can ad global styles to this file, and also import other style files */
+/* TOASTR BUGFIX */
+#toast-container > div {
+    opacity: 1;
+  }
+  .toast {
+    font-size: initial !important;
+    border: initial !important;
+    backdrop-filter: blur(0) !important;
+  }
+  .toast-success {
+    background-color: #51A351 !important;
+  }
+  .toast-error {
+    background-color: #BD362F !important;
+  }
+  .toast-info {
+    background-color: #2F96B4 !important;
+  }
+  .toast-warning {
+    background-color: #F89406 !important;
+  }
+
+  // ovo gore je dodatno i ne radi bas najbolje
+
+  .xng-breadcrumb-root {
+    padding: 8px 16px;
+    display: inline;
+    border-radius: 0;
+  }
+
+  label.xng-breadcrumb-trail {
+    margin-bottom: 0;
+    color: orange;
+  }
+  .xng-breadcrumb-separator {
+    padding: 0 0;
+  }

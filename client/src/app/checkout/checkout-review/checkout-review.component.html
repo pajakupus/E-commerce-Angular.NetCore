@@ -1,0 +1,20 @@
+<div class="mt-4">
+    <app-basket-summary
+         [isBasket]=false
+         [items]="(basket$ | async).items"
+    >
+    </app-basket-summary>
+</div>
+
+<div class="row d-flex justify-content-between float-none mb-5">
+    <button class="btn btn-outline-primary " cdkStepperPrevious>
+        <div class="d-flex flex-row justify-content-between">
+            <i  class="fa fa-angle-left" style="font-size: 2em;"></i><div class="mt-1 px-2">Back to Delivery</div>
+        </div>
+    </button>
+    <button class="btn btn-primary" cdkStepperNext>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="mt-1 px-2">Payment</div><i  class="fa fa-angle-right" style="font-size: 2em;"></i>
+        </div>
+    </button>
+</div>

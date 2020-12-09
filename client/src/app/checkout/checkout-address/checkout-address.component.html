@@ -1,0 +1,42 @@
+<div class="mt-4" [formGroup]="checkoutForm">
+    <div class="d-flex justify-content-between align-items-center">
+        <h4>Shipping Address</h4>
+        <button 
+            (click)="saveUserAddress()"
+            [disabled]="!checkoutForm.get('addressForm').valid || 
+                !checkoutForm.get('addressForm').dirty"
+            class="btn btn-outline-success mb-3">
+            Save as Default address
+        </button>
+    </div>
+    <div class="row" formGroupName="addressForm">
+        <div class="form-group col-6">
+            <app-text-input [label]="'First Name'" formControlName="firstName"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Last Name'" formControlName="lastName"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Street'" formControlName="street"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'City'" formControlName="city"></app-text-input>
+        </div>
+        <div class="form-group col-6">
+            <app-text-input [label]="'Zip Code'" formControlName="zipCode"></app-text-input>
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-between float-none mb-5">
+    <button class="btn btn-outline-primary " routerLink="/basket">
+        <div class="d-flex flex-row justify-content-between">
+            <i  class="fa fa-angle-left" style="font-size: 2em;"></i><div class="mt-1 px-2">Back to Basket</div>
+        </div>
+    </button>
+    <button class="btn btn-primary" cdkStepperNext>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="mt-1 px-2">Delivery options</div><i  class="fa fa-angle-right" style="font-size: 2em;"></i>
+        </div>
+    </button>
+</div>
